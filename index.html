@@ -56,6 +56,9 @@
                             <span><b>{{contatto.name}}</b></span>
                             <span>{{contatto.messages[contatto.messages.length - 1].text}} ...</span>
                         </div>
+                        <div class="date">
+                            {{contatto.messages[contatto.messages.length - 1].date}}
+                        </div>
                     </div>
                 </div>
                 
@@ -76,13 +79,31 @@
                 </div>
 
                 <div class="username-icons">
-                    <i class="fas fa-circle-notch"></i>
-                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
    
             </div>
 
+            <div class="messaggi">
+                <div class="cf">
+                    <div class="sent">Hai portato a spasso il cane</div>
+                </div>
+                <div class="cf">
+                    <div class="sent">Ricorda</div>
+                </div>
+                
+                <div class="cf">
+                    <div class="received">Ricorda</div>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <i class="far fa-smile"></i>
+                <input id="user-text" type="text" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
+            </div>
         </main>
 
     </div>

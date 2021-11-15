@@ -128,15 +128,81 @@ aside {
     background-color: #eaeaea !important;
 }
 
+
+aside .avatar {
+    width: 100%;
+    position: relative;
+}
+
+aside .date {
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
 /* main (conversazioni) */
 main {
     float: left;
     width: 70%;
     height: 100%;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    position: relative;
 }
 
 
 main .username {
-    border-left: 1px solid rgba(0,0,0, .1)
+    border-left: 1px solid rgba(0,0,0, .1);
+}
+
+.messaggi {
+    margin-top: 60px;
+}
+
+.sent,
+.received {
+    width: 300px;
+    padding: 17px 15px;
+    border-radius: 7px;
+    margin: 10px 0;
+}
+
+.sent {
+    background-color: #d5f9ba;
+    float: right;
+    margin-right: 130px;
+}
+
+.received {
+    background-color: white;
+    margin-left: 130px;
+
+}
+
+
+.action-bar {
+    background: #f3eeea;
+    padding: 13px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#user-text {
+    width: 85%;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.action-bar .far,
+.action-bar .fas {
+    color: rgba(0,0,0, .7);
+    font-size: 25px;
 }
