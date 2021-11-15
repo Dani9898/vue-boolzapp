@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+
+        <aside>
+            <div class="username">
+
+                <div class="avatar">
+                    <img src="img/avatar_io.jpg" alt="my avatar">
+                    <div class="text">
+                        <span><b>Nome Utente</b></span>
+                    </div>      
+                </div>
+
+                <div class="username-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+   
+            </div>
+
+            <div class="notifiche-dt">
+
+                <div class="white-circle">
+                    <i class="far fa-bell-slash"></i>
+                </div>
+
+                <div class="text">
+                    <span>Ricevi notifiche di nuovi messaggi</span>
+                    <span class="underline">Attiva notifiche desktop</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input class="bar" type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+
+            <div class="utenti">
+
+                <div class="username" v-for="contatto, i in contatti">
+                    <div class="avatar">
+                        <img :src="contatto.avatar">
+                        <div class="text">
+                            <span><b>{{contatto.name}}</b></span>
+                            <span>{{contatto.messages[contatto.messages.length - 1].text}} ...</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </aside>
+
+
+        <main></main>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

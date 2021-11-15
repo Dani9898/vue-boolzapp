@@ -1,0 +1,133 @@
+/* generali */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cf::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* contenuto */
+
+#container {
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh auto;
+    border: 1px solid rgba(0,0,0, .1);
+}
+
+
+
+/* aside (contatti) */
+
+aside {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+aside .username {
+    padding: 10px 0;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside .username .avatar {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+aside .username .avatar img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+aside .username .avatar .text {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .username .username-icons {
+    margin-right: 20px;
+    font-size: 22px;
+    color: #b1b1b1;
+}
+
+aside .username .username-icons .fas {
+    margin: 0 8px;
+}
+
+aside .notifiche-dt {
+    background-color: #8edafc;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+aside .notifiche-dt .white-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside .notifiche-dt .fa-bell-slash {
+    font-size: 27px;
+    color: #8edafc;
+}
+
+aside .notifiche-dt .text {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .notifiche-dt .text .underline {
+    text-decoration: underline;
+    color: #507485;
+}
+
+aside .search-bar {
+    margin: 5px;
+    position: relative;
+}
+
+aside .search-bar .fa-search {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0%, -50%);
+    color: #b5b9bb;
+}
+
+aside .search-bar .bar {
+    width: 100%;
+    padding: 10px 0px 10px 60px;
+}
+
+aside .utente .username {
+    border-top: 1px solid #eaeaea;
+}
+
+/* main (conversazioni) */
+main {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: pink;
+}
+
