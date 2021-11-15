@@ -2,6 +2,9 @@ var app = new Vue(
     {
         el: "#container",
         data: {
+            
+            inChat: 0,
+
             contatti: [
                 {
                     name: "Michele",

@@ -33,7 +33,7 @@ aside {
     height: 100%;
 }
 
-aside .username {
+.username {
     padding: 10px 0;
     background-color: #eaeaea;
     display: flex;
@@ -41,41 +41,41 @@ aside .username {
     align-items: center;
 }
 
-aside .username .avatar {
+.username .avatar {
     margin-left: 20px;
     display: flex;
     align-items: center;
 }
 
-aside .username .avatar img {
+.username .avatar img {
     width: 60px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-aside .username .avatar .text {
+.username .avatar .text {
     display: flex;
     flex-direction: column;
 }
 
-aside .username .username-icons {
+.username .username-icons {
     margin-right: 20px;
     font-size: 22px;
     color: #b1b1b1;
 }
 
-aside .username .username-icons .fas {
+.username .username-icons .fas {
     margin: 0 8px;
 }
 
-aside .notifiche-dt {
+.notifiche-dt {
     background-color: #8edafc;
     padding: 20px 0;
     display: flex;
     align-items: center;
 }
 
-aside .notifiche-dt .white-circle {
+.notifiche-dt .white-circle {
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -86,27 +86,27 @@ aside .notifiche-dt .white-circle {
     justify-content: center;
 }
 
-aside .notifiche-dt .fa-bell-slash {
+.notifiche-dt .fa-bell-slash {
     font-size: 27px;
     color: #8edafc;
 }
 
-aside .notifiche-dt .text {
+.notifiche-dt .text {
     display: flex;
     flex-direction: column;
 }
 
-aside .notifiche-dt .text .underline {
+.notifiche-dt .text .underline {
     text-decoration: underline;
     color: #507485;
 }
 
-aside .search-bar {
+.search-bar {
     margin: 5px;
     position: relative;
 }
 
-aside .search-bar .fa-search {
+.search-bar .fa-search {
     position: absolute;
     top: 50%;
     left: 20px;
@@ -114,13 +114,18 @@ aside .search-bar .fa-search {
     color: #b5b9bb;
 }
 
-aside .search-bar .bar {
+.search-bar .bar {
     width: 100%;
     padding: 10px 0px 10px 60px;
 }
 
-aside .utente .username {
+.utenti .username {
     border-top: 1px solid #eaeaea;
+    background-color: white;
+}
+
+.active {
+    background-color: #eaeaea !important;
 }
 
 /* main (conversazioni) */
@@ -128,6 +133,10 @@ main {
     float: left;
     width: 70%;
     height: 100%;
-    background-color: pink;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
 }
 
+
+main .username {
+    border-left: 1px solid rgba(0,0,0, .1)
+}

@@ -49,7 +49,7 @@
 
             <div class="utenti">
 
-                <div class="username" v-for="contatto, i in contatti">
+                <div class="username" :class="i===inChat ? 'active' : '' " v-for="contatto, i in contatti" :key="i" >
                     <div class="avatar">
                         <img :src="contatto.avatar">
                         <div class="text">
@@ -64,7 +64,26 @@
         </aside>
 
 
-        <main></main>
+        <main>
+
+            <div class="username">
+
+                <div class="avatar">
+                    <img src="img/avatar_io.jpg" alt="my avatar">
+                    <div class="text">
+                        <span><b>Nome Utente</b></span>
+                    </div>      
+                </div>
+
+                <div class="username-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+   
+            </div>
+
+        </main>
 
     </div>
 
