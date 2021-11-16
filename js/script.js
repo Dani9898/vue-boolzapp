@@ -93,7 +93,7 @@ var app = new Vue(
         },
         methods: {
             cambioChat(indice) {
-                inChat = indice;
+                this.inChat = indice;
                 console.log(inChat);
             }
         }            
