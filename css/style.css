@@ -172,6 +172,7 @@ main .username {
     padding: 17px 15px;
     border-radius: 7px;
     margin: 10px 0;
+    position: relative;
 }
 
 .sent {
@@ -209,7 +210,26 @@ main .username {
 
 
 .action-bar .far,
-.action-bar .fas {
+.action-bar .fas,
+.ultimo-accesso,
+.ultimo-accesso-msg {
     color: rgba(0,0,0, .7);
+}
+
+.action-bar .far,
+.action-bar .fas {
     font-size: 25px;
+}
+
+
+.ultimo-accesso {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.ultimo-accesso-msg {
+    font-size: 11px;
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
 }
