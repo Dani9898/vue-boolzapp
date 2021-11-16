@@ -49,7 +49,7 @@
 
             <div class="utenti">
 
-                <div class="username" :class="i===inChat ? 'active' : '' " v-for="contatto, i in contatti" :key="i" >
+                <div class="username" :class="i===inChat ? 'active' : '' " v-for="contatto, i in contatti" :key="i" @click="cambioChat(i)">
                     <div class="avatar">
                         <img :src="contatto.avatar">
                         <div class="text">
@@ -87,15 +87,8 @@
             </div>
 
             <div class="messaggi">
-                <div class="cf">
-                    <div class="sent">Hai portato a spasso il cane</div>
-                </div>
-                <div class="cf">
-                    <div class="sent">Ricorda</div>
-                </div>
-                
-                <div class="cf">
-                    <div class="received">Ricorda</div>
+                <div class="cf" v-for="message in contatti[inChat].messages">
+                    <div :class="message.status">{{message.text}}</div>
                 </div>
             </div>
 

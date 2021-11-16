@@ -90,7 +90,13 @@ var app = new Vue(
                     ]
                 }
             ]            
-        }               
-    }                   
+        },
+        methods: {
+            cambioChat(indice) {
+                inChat = indice;
+                console.log(inChat);
+            }
+        }            
+    }      
 
 )
