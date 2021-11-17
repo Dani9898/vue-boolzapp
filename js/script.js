@@ -100,7 +100,7 @@ var app = new Vue(
             },
 
             writeMsg(){
-                if (isNaN(this.newMsg)) {
+                if (this.newMsg.trim() !== "") {
 
                     let oggi = new Date();
 
@@ -121,14 +121,14 @@ var app = new Vue(
                         status: "received"
                     };
 
-                    this.inChat2 = this.inChat
+                    inChat2 = this.inChat
 
-                    this.contatti[this.inChat2].messages.push(newUserMsg);
+                    this.contatti[inChat2].messages.push(newUserMsg);
 
                     this.newMsg = "";
 
                     setTimeout(() => {
-                        this.contatti[this.inChat2].messages.push(newAnswerMsg)
+                        this.contatti[inChat2].messages.push(newAnswerMsg)
                     }, 1000);
                 }
             }
