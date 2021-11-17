@@ -5,6 +5,8 @@ var app = new Vue(
             
             inChat: 0,
 
+            newMsg: "",
+
             contatti: [
                 {
                     name: "Michele",
@@ -92,8 +94,34 @@ var app = new Vue(
             ]            
         },
         methods: {
+
             cambioChat(indice) {
                 this.inChat = indice;
+            },
+
+            writeMsg(){
+                const newUserMsg = {
+                    date: "adesso",
+                    text: this.newMsg,
+                    status: "sent"
+                };
+
+                const newAnswerMsg = {
+                    date: "adesso",
+                    text: "ok",
+                    status: "received"
+                };
+
+                this.inChat2 = this.inChat
+
+                this.contatti[this.inChat2].messages.push(newUserMsg);
+
+                this.newMsg = "";
+
+                setTimeout(() => {
+                    this.contatti[this.inChat2].messages.push(newAnswerMsg)
+                }, 1000);
+               
             }
         }            
     }      

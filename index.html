@@ -98,7 +98,7 @@
 
             <div class="action-bar">
                 <i class="far fa-smile"></i>
-                <input id="user-text" type="text" placeholder="Scrivi un messaggio">
+                <input id="user-text" type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="writeMsg">
                 <i class="fas fa-microphone"></i>
             </div>
         </main>
