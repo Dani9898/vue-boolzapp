@@ -2,7 +2,7 @@ var app = new Vue(
     {
         el: "#container",
         data: {
-            
+
             inChat: 0,
 
             newMsg: "",
@@ -100,30 +100,41 @@ var app = new Vue(
             },
 
             writeMsg(){
-                const newUserMsg = {
-                    date: "adesso",
-                    text: this.newMsg,
-                    status: "sent"
-                };
+                if (isNaN(this.newMsg)) {
 
-                const newAnswerMsg = {
-                    date: "adesso",
-                    text: "ok",
-                    status: "received"
-                };
+                    let oggi = new Date();
 
-                this.inChat2 = this.inChat
+                    let actualData = oggi.toLocaleDateString();
+                    
+                    let actualOra =  oggi.getHours() + ":" + oggi.getMinutes() + ":" + oggi.getSeconds();
 
-                this.contatti[this.inChat2].messages.push(newUserMsg);
 
-                this.newMsg = "";
+                    const newUserMsg = {
+                        date: `${actualData} ${actualOra}`,
+                        text: this.newMsg,
+                        status: "sent"
+                    };
+                    
+                    const newAnswerMsg = {
+                        date: `${actualData} ${actualOra}`,
+                        text: "ok",
+                        status: "received"
+                    };
 
-                setTimeout(() => {
-                    this.contatti[this.inChat2].messages.push(newAnswerMsg)
-                }, 1000);
-               
+                    this.inChat2 = this.inChat
+
+                    this.contatti[this.inChat2].messages.push(newUserMsg);
+
+                    this.newMsg = "";
+
+                    setTimeout(() => {
+                        this.contatti[this.inChat2].messages.push(newAnswerMsg)
+                    }, 1000);
+                }
             }
         }            
     }      
 
 )
+
+
