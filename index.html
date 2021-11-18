@@ -44,12 +44,13 @@
 
             <div class="search-bar">
                 <i class="fas fa-search"></i>
-                <input class="bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                <input class="bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact">
             </div>
-
+            <!-- :class="contatto.name === searchContact' 'nascosto' : '' " -->
+            <!-- :class="i===inChat ? 'active' : '' " -->
             <div class="utenti">
 
-                <div class="username" :class="i===inChat ? 'active' : '' " v-for="contatto, i in contatti" :key="i" @click="cambioChat(i)">
+                <div class="username" :class="[i===inChat ? 'active' : '', !contatto.name.toLowerCase().includes(searchContact.toLowerCase()) ? 'nascosto' : '']"  v-for="contatto, i in contatti" :key="i" @click="cambioChat(i)">
                     <div class="avatar">
                         <img :src="contatto.avatar" :alt="contatto.name">
                         <div class="text">
