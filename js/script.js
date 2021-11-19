@@ -115,20 +115,21 @@ var app = new Vue(
 
                     let oggi = new Date();
 
-                    let actualData = oggi.toLocaleDateString();
+                    let actualData =  oggi.toLocaleDateString() + " " + oggi.toLocaleTimeString();
                     
-                    let actualOra =  oggi.getHours() + ":" + oggi.getMinutes() + ":" + oggi.getSeconds();
+                    
+                    // let actualOra =  oggi.getHours() + ":" + oggi.getMinutes() + ":" + oggi.getSeconds();
 
 
                     const newUserMsg = {
-                        date: `${actualData} ${actualOra}`,
+                        date: `${actualData}`,
                         text: this.newMsg,
                         status: "sent",
                         visible: false
                     };
                     
                     const newAnswerMsg = {
-                        date: `${actualData} ${actualOra}`,
+                        date: `${actualData}`,
                         text: "ok",
                         status: "received",
                         visible: false
