@@ -164,6 +164,7 @@ main .username {
 
 .messaggi {
     margin-top: 60px;
+    position: relative;
 }
 
 .sent,
@@ -236,4 +237,36 @@ main .username {
 
 .nascosto {
     display: none;
+}
+
+.msg-settings {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: grey;
+    display: none;
+    cursor: pointer;
+}
+
+.delete-msg {
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 120px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+    font-size: 14px;
+}
+
+.show-settings {
+    display: block;
+}
+
+/* hovers */
+
+.sent:hover .msg-settings,
+.received:hover .msg-settings{
+    display: block;
 }

@@ -89,10 +89,14 @@
             </div>
 
             <div class="messaggi">
-                <div class="cf" v-for="message in contatti[inChat].messages">
+                <div class="cf" v-for="message, i in contatti[inChat].messages" :key="i">
                     <div :class="message.status">
                         <span>{{message.text}}</span>
                         <span class="ultimo-accesso-msg">{{message.date}}</span>
+                        <span class="msg-settings" @click="showMsgMenu(i)">
+                            <i class="fas fa-angle-up"></i>
+                            <div class="delete-msg" ref="msgSettings" :class="contatti[inChat].messages[i].visible ? 'show-settings' : '' " @click="deleteMsg(i)">Delete Message</div>
+                        </span>
                     </div>
                 </div>
             </div>
